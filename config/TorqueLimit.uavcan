@@ -1,6 +1,6 @@
 #
 # This limit applies to all three control modes.
 # Note: This command also exists as a service call which provides acknowledge.
-#  
+#
 
 float16 torque_limit        # [Nm] or NaN to disable
