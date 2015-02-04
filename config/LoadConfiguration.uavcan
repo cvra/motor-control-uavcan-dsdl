@@ -12,33 +12,42 @@ float16 current_ctrl_p_gain
 float16 current_ctrl_i_gain
 float16 current_ctrl_d_gain      # (needed?)
 
-float16 position_ctrl_loop_frequency     # [hz]
-float16 speed_ctrl_loop_frequency        # [hz]
-float16 current_ctrl_loop_frequency      # [hz]
+float16 position_ctrl_loop_frequency     # [Hz]
+float16 speed_ctrl_loop_frequency        # [Hz]
+float16 current_ctrl_loop_frequency      # [Hz]
 
-float16 thermal_capacity        # [j/k]
-float16 thermal_resistance      # (to ambient which is assumed 25degc) [k/w]
-float16 thermal_current_gain    # (coil_resistance) [ohm = w/a^2]
-float16 max_temperature         # [degc]
+float16 thermal_capacity        # [J/K]
+float16 thermal_resistance      # (to ambient which is assumed 25degC) [K/W]
+float16 thermal_current_gain    # (coil_resistance) [ohm = W/A^2]
+float16 max_temperature         # [degC]
 
-float16 torque_constant         # (of motor without transmission) [nm/a]
-float16 torque_limit            # [nm]
+float16 torque_constant         # (of motor without transmission) [Nm/A]
+float16 torque_limit            # [Nm]
 float16 speed_limit             # [rad/s]
 
-uint16 motor_encoder_steps_per_revolution   # (0=NA)
 float16 transmission_ratio                  # (output/motor)
+uint16 motor_encoder_steps_per_revolution   # (0=NA)
 uint16 second_encoder_steps_per_revolution  # (0=NA)
 
 float16 potentiometer_min       # [0...1]
 float16 potentiometer_max       # [0...1]
 
-uint2 GPIO1_function        # (0: unused, 1: encoder A, 2: positive stop, 3: zero reference)
-uint2 GPIO2_function        # (0: unused, 1: encoder B, 2: negative stop)
-uint2 GPIOA_function        # (0: unused, 1: potentiometer, 2: positive stop, 3: zero reference)
-bool enable_ABS             # Anti-lock Braking System
- 
+uint8 MODE_OPEN_LOOP                =  0  # open loop speed control (voltage control, speed setpoint is between -1,1 for full scale PWM)
+uint8 MODE_INDEX                    =  1  # speed control with index
+uint8 MODE_MOTOR_ENC                =  2  # encoder on motor axis
+uint8 MODE_MOTOR_ENC_2ND_DIRECT     =  3  # encoder on motor axis, second encoder on output (with index)
+uint8 MODE_MOTOR_ENC_2ND_DIRECT_REF =  3  # encoder on motor axis, second encoder on output with zero reference
+uint8 MODE_MOTOR_ENC_2ND_INDIRECT   =  4  # encoder on motor axis, second encoder independent (2nd odometry wheel) (with index)
+uint8 MODE_MOTOR_ENC_MIN_MAX        =  5  # encoder on motor axis, with min/max switch
+uint8 MODE_MOTOR_ENC_MIN_MAX_REF    =  6  # encoder on motor axis, with min/max switch and zero reference
+uint8 MODE_MOTOR_ENC_REF            =  7  # encoder on motor axis, with zero reference
+uint8 MODE_MOTOR_POT                =  8  # potentiometer (servo mode)
+uint8 MODE_MOTOR_POT_MIN_MAX        =  9  # potentiometer (servo mode), with min/max switch
+uint8 MODE_MOTOR_POT_REF            = 10  # potentiometer (servo mode), with zero reference
+uint8 mode  # operation mode as defined above
+
 ---
- 
+
 # Reply
 
 int8[<=128] error_message       # (length of 0 for no error)
