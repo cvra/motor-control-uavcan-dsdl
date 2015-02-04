@@ -1,0 +1,6 @@
+#
+# Switch to position control and hold given position.
+# A trapezoidal velocity profile is automatically generated.
+#
+
+float32 position        # [rad]

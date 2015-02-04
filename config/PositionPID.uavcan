@@ -1,0 +1,6 @@
+#
+# Note: This command also exists as a service call which provides acknowledge.
+#
+
+float16 position_p_gain
+float16 position_d_gain
