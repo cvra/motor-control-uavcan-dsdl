@@ -3,7 +3,7 @@
 # speed. Position interpolation between updates is done assuming constant speed.
 # A feed-forward torque can be applied if given.
 #
- 
+
 float16 position      # [rad]
 float16 velocity      # [rad/s]
 float16 torque        # [Nm]
