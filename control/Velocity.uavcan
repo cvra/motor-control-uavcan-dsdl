@@ -2,4 +2,4 @@
 # Switch to speed control and hold given speed.
 #
 
-float32 speed       # [rad/s]
+float32 velocity       # [rad/s]
