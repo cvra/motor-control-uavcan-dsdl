@@ -1,2 +1,0 @@
-uint8 bootloader_timeout  # in seconds. set to 0 to reboot immediately, 255 to wait indefinitely
----
