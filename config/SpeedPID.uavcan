@@ -1,7 +1,0 @@
-#
-# Note: This command also exists as a service call which provides acknowledge.
-#
-
-float16 speed_p_gain
-float16 speed_i_gain
-float16 speed_d_gain

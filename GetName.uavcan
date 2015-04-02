@@ -1,7 +1,0 @@
-#
-# Get Name
-# 
- 
----
-
-int8[<=32] name     # ASCII string
