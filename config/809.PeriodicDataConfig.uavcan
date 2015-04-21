@@ -7,3 +7,4 @@ int8 message_type
 float16 transmission_rate       # [Hz]
 
 ---
+int8 dummy # Reponse cannot be empty (see uavcan/uavcan issue #23)
