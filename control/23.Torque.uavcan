@@ -1,0 +1,5 @@
+#
+# Switch to torque control and hold given torque.
+#
+
+float32 torque       # [Nm]
