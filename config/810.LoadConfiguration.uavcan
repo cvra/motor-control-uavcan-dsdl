@@ -23,6 +23,8 @@ uint16 transmission_ratio_q                 # (output/motor)
 uint16 motor_encoder_steps_per_revolution   # (0=NA)
 uint16 second_encoder_steps_per_revolution  # (0=NA)
 
+float16 potentiometer_gain
+
 float16 low_batt_th             # [V] low battery threshold
 
 uint8 MODE_OPEN_LOOP                =  0  # open loop speed control (voltage control, speed setpoint is in V)
