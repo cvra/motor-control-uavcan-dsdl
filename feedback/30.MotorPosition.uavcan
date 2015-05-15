@@ -1,6 +1,6 @@
 #
-# Motor Position & Speed
+# Motor Position & Velocity
 #
 
 float32 position      # [rad]
-float16 speed         # [rad/s]
+float16 velocity      # [rad/s]
