@@ -1,4 +1,1 @@
 PID pid
-
----
-int8 dummy # Reponse cannot be empty (see uavcan/uavcan issue #23)

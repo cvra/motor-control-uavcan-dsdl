@@ -3,6 +3,3 @@
 #
 
 float16 torque_limit        # [Nm] or NaN to disable
-
----
-int8 dummy # Reponse cannot be empty (see uavcan/uavcan issue #23)

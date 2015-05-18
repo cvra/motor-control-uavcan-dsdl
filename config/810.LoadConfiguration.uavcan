@@ -32,9 +32,3 @@ uint8 MODE_ENC_BOUNDED              =  3  # bounded, encoder on motor axis
 uint8 MODE_2_ENC_PERIODIC           =  4  # periodic, encoder on motor axis, 2nd encoder on output
 uint8 MODE_MOTOR_POT                =  5  # bounded, potentiometer (servo mode)
 uint8 mode  # operation mode as defined above
-
----
-
-# Reply
-
-int8[<=128] error_message       # (length of 0 for no error)
