@@ -2,4 +2,7 @@
 # Switch to torque control and hold given torque.
 #
 
+# UAVCAN node ID for unicast addressing
+uint7 node_id
+
 float32 torque       # [Nm]
