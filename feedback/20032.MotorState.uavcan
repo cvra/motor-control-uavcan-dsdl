@@ -1,0 +1,8 @@
+#
+# Motor State
+# Position, Velocity and Torque
+#
+
+float16 position    # [rad]
+float16 velocity    # [rad/s]
+float16 torque      # [Nm]
