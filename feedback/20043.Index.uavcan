@@ -3,3 +3,4 @@
 #
 
 float16 position
+uint32 update_count
